@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Гадания и Эзотерическая Помощь</title>
-  <meta name="description" content="Профессиональные гадания и эзотерическая помощь. Любовь, финансы, здоровье. Анонимно и безопасно.">
+  <title>Луна Ворожея — Онлайн Предсказания и Магическая Консультация</title>
+  <meta name="description" content="Персональные онлайн-гадания и магическая помощь по картам Таро, рунам и звёздам. Любовь, финансы, здоровье. Анонимно и точно.">
   <script>
     const SITE_SETTINGS = {
   'phoneNumber': '+79033356088',
@@ -26,10 +26,10 @@
       --text:#fff;
       --muted:#cbd5e1;
       --subtle:#94a3b8;
-      /* НАБОР ЦВЕТОВ 1: */
-      --p1:#c084fc;
-      --p2:#a855f7;
-      --p3:#8b5cf6;
+      /* НОВЫЙ НАБОР ЦВЕТОВ: 10. Океаническая глубь */
+      --p1:#8ecae6; /* Светло-голубой */
+      --p2:#219ebc; /* Сине-зелёный */
+      --p3:#023047; /* Тёмно-синий */
       --grad:linear-gradient(120deg,var(--p1),var(--p2));
       --radius:12px;
       --r-lg:18px;
@@ -68,15 +68,15 @@
       width: 100%;
       height: 100%;
       background-image:
-        radial-gradient(circle at 20% 30%, rgba(192, 132, 252, 0.05) 0%, transparent 20%),
-        radial-gradient(circle at 80% 70%, rgba(168, 85, 247, 0.05) 0%, transparent 20%);
+        radial-gradient(circle at 20% 30%, rgba(142, 202, 230, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 80% 70%, rgba(33, 158, 188, 0.05) 0%, transparent 20%);
       z-index: -1;
     }
     .hero-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
-    .hero-title{font-size:clamp(28px,5vw,56px);font-weight:800;line-height:1.1;background:linear-gradient(90deg,var(--p1),var(--p2),var(--p3));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero-title{font-size:clamp(28px,5vw,56px);font-weight:800;line-height:1.1;background:linear-gradient(115deg,var(--p1),var(--p2),var(--p3));-webkit-background-clip:text;background-clip:text;color:transparent}
     .hero-text{font-size:18px;color:var(--muted);margin-top:12px}
     .cta-row{display:flex;gap:12px;align-items:center;margin-top:24px}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 22px;border-radius:16px;font-weight:700;background:var(--grad);color:#000;box-shadow:0 6px 20px rgba(192, 132, 252, .35);cursor:pointer;position:relative;overflow:hidden; text-decoration: none; justify-content: center; width: auto; max-width: 320px; margin: 0 auto; letter-spacing: 0.5px;}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 22px;border-radius:14px;font-weight:700;background:var(--grad);color:#000;box-shadow:0 8px 25px rgba(33, 158, 188, .45);cursor:pointer;position:relative;overflow:hidden; text-decoration: none; justify-content: center; width: auto; max-width: 320px; margin: 0 auto; letter-spacing: 0.5px;}
     .btn:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);left:-100%;opacity:0}
     .btn:hover:after{left:100%;opacity:1;transition:left .8s ease,opacity .8s ease}
     .btn:active{transform:scale(.98)}
@@ -86,7 +86,7 @@
       position:absolute;
       inset:-4px;
       border-radius:16px;
-      background:radial-gradient(circle, #c084fc 0%, transparent 70%);
+      background:radial-gradient(circle, #219ebc 0%, transparent 70%);
       z-index:-1;
       animation:aura 2s ease-in-out infinite;
       pointer-events: none;
@@ -109,8 +109,8 @@
       display:inline-block;
       width:8px;height:8px;
       border-radius:50%;
-      background:#c084fc;
-      box-shadow:0 0 8px #c084fc;
+      background:#219ebc;
+      box-shadow:0 0 8px #219ebc;
       animation:pulse 1.5s infinite;
     }
     @keyframes pulse{
@@ -118,8 +118,8 @@
     }
     /* --- КОНЕЦ НОВЫХ СТИЛЕЙ --- */
     .hero-visual{position:relative;display:grid;place-items:center}
-    .ball-wrap{position:relative;width:min(60vw,480px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;animation: float 6s ease-in-out infinite}
-    canvas#ball{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;box-shadow:0 25px 70px rgba(168, 85, 247, .35), inset 0 0 40px rgba(192, 132, 252, .2)}
+    .ball-wrap{position:relative;width:min(60vw,480px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;animation: float 7s ease-in-out infinite}
+    canvas#ball{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;box-shadow:0 25px 70px rgba(33, 158, 188, .35), inset 0 0 40px rgba(33, 158, 188, .2)}
     .ball-fallback{display: none;}
     /* --- Стили для фото гадалки в центре шара --- */
     .psychic-photo-wrapper {
@@ -136,8 +136,8 @@
       justify-content: center;
       align-items: center;
       box-shadow:
-        0 0 20px rgba(192, 132, 252, 0.5),
-        0 0 40px rgba(168, 85, 247, 0.3),
+        0 0 20px rgba(33, 158, 188, 0.5),
+        0 0 40px rgba(142, 202, 230, 0.3),
         inset 0 0 20px rgba(255, 255, 255, 0.1);
       background: transparent;
     }
@@ -151,7 +151,7 @@
     .mystic-fog { display: none; }
     .magic-runes { display: none; }
     canvas#auraCanvas{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;z-index:5;pointer-events:none}
-    /* ПРОБЛЕМЫ — “карты” с flip */
+    /* ПРОБЛЕМЫ — "карты" с flip */
     section{padding:72px 0;position:relative}
     .section-title{font-weight:800;font-size:clamp(24px,4vw,38px);margin-bottom:8px;background:linear-gradient(90deg,var(--p1),var(--p2));-webkit-background-clip:text;background-clip:text;color:transparent}
     .section-sub{color:var(--subtle);margin-bottom:28px}
@@ -161,18 +161,18 @@
     .card:hover .face { backdrop-filter: blur(2px); }
     .card-inner{position:relative;width:100%;height:220px;border-radius:var(--r-lg);transform-style:preserve-3d;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
     .card.is-flipped .card-inner{transform:rotateY(180deg)}
-    .face{position:absolute;inset:0;border-radius:var(--r-lg);backface-visibility:hidden;border:2px solid rgba(192, 132, 252, .15);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));box-shadow:var(--shadow);padding:18px;display:flex;flex-direction:column;gap:10px}
+    .face{position:absolute;inset:0;border-radius:var(--r-lg);backface-visibility:hidden;border:2px solid rgba(33, 158, 188, .15);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));box-shadow:var(--shadow);padding:18px;display:flex;flex-direction:column;gap:10px}
     .face .icon{font-size:28px}
     .face h3{font-size:18px}
     .face p{font-size:14px;color:var(--muted)}
     .back{transform:rotateY(180deg);background:
-      radial-gradient(1200px 1200px at -30% -30%, rgba(192, 132, 252, .15), transparent 60%),
+      radial-gradient(1200px 1200px at -30% -30%, rgba(33, 158, 188, .15), transparent 60%),
       linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      border-color:rgba(192, 132, 252, .28);
+      border-color:rgba(33, 158, 188, .28);
     }
     .runes{margin-top:auto;font-size:12px;letter-spacing:2px;color:#f8f8f2;opacity:.8}
     /* CTA портал */
-    .cta{margin-top:14px;background:linear-gradient(135deg,rgba(192, 132, 252, .08),rgba(168, 85, 247, .08));border:2px solid rgba(192, 132, 252, .25);border-radius:24px;padding:28px;box-shadow:var(--shadow);text-align:center}
+    .cta{margin-top:14px;background:linear-gradient(135deg,rgba(33, 158, 188, .08),rgba(142, 202, 230, .08));border:1px solid rgba(33, 158, 188, .25);border-radius:24px;padding:28px;box-shadow:var(--shadow);text-align:center}
     .portal{display: none;}
     @keyframes rotate {
       from { transform: rotate(0deg); }
@@ -183,7 +183,7 @@
       50% { transform: translateY(-20px); }
     }
     /* Портальный оверлей при клике */
-    .portal-overlay{display: none; position:fixed;inset:0;pointer-events:none;background:radial-gradient(600px 600px at var(--x,50%) var(--y,50%), rgba(168, 85, 247, .45), rgba(10,10,15,.96) 55%, rgba(10,10,15,1) 70%);opacity:0;transition:opacity .4s ease;z-index:9999}
+    .portal-overlay{display: none;position:fixed;inset:0;pointer-events:none;background:radial-gradient(600px 600px at var(--x,50%) var(--y,50%), rgba(33, 158, 188, .45), rgba(10,10,15,.96) 55%, rgba(10,10,15,1) 70%);opacity:0;transition:opacity .4s ease;z-index:9999}
     .portal-overlay.active{opacity:1}
     /* Курсорная аура (canvas) */
     canvas#cursorAura{position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.6}
@@ -284,7 +284,7 @@
       }
       .card:active .face .icon {
         transform: scale(1.2);
-        text-shadow: 0 0 6px rgba(192, 132, 252, 0.7);
+        text-shadow: 0 0 6px rgba(33, 158, 188, 0.7);
       }
       .face h3 {
         font-size: 16px;
@@ -349,7 +349,7 @@
       height: 50px;
       border-radius: 50%;
       overflow: hidden;
-      box-shadow: 0 0 15px rgba(192, 132, 252, 0.7);
+      box-shadow: 0 0 15px rgba(33, 158, 188, 0.7);
       position: relative;
       animation: float 3s ease-in-out infinite;
     }
@@ -367,10 +367,10 @@
       bottom: -5px;
       background: conic-gradient(
         from 0deg,
-        #c084fc,
-        #a855f7,
-        #8b5cf6,
-        #c084fc
+        #8ecae6,
+        #219ebc,
+        #023047,
+        #8ecae6
       );
       border-radius: 50%;
       z-index: -1;
@@ -395,7 +395,7 @@
       left: -3px;
       right: -3px;
       bottom: -3px;
-      background: radial-gradient(circle, rgba(192, 132, 252, 0.4) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(33, 158, 188, 0.4) 0%, transparent 70%);
       border-radius: 50%;
       z-index: -1;
       animation: aura 2s ease-in-out infinite;
@@ -483,7 +483,7 @@
       line-height: 1.3;
       color: #fff;
       background: rgba(255,255,255,.12);
-      border: 1px solid rgba(192, 132, 252, .25);
+      border: 1px solid rgba(33, 158, 188, .25);
       border-radius: 18px 18px 18px 4px;
       backdrop-filter: blur(6px);
       opacity: 0;
@@ -504,7 +504,7 @@
       display: inline-block;
       width: 2px;
       height: 1em;
-      background: #c084fc;
+      background: #219ebc;
       animation: blink 1s infinite;
     }
     @keyframes blink{ 50%{ opacity: 0; } }
@@ -530,13 +530,13 @@
   <header class="hero">
     <div class="container hero-inner">
       <div>
-        <h1 class="hero-title">Раскрой Свою Судьбу</h1>
-        <p class="hero-text">Погрузитесь в мир древних знаний и получите ответы на самые сокровенные вопросы.</p>
+        <h1 class="hero-title">Луна Ворожея — Раскройте Свою Судьбу</h1>
+        <p class="hero-text">Онлайн-гадания и магическая помощь. Предсказания по картам Таро, рунам и звёздам. Анонимно и точно.</p>
         <div class="cta-row">
-          <a href="#" id="waBtn" class="btn" aria-label="Написать в WhatsApp"><span>🪄</span> Написать в WhatsApp</a>
+          <a href="#" id="waBtn" class="btn" aria-label="Написать в WhatsApp"><span>🌙</span> Написать в WhatsApp</a>
           <div class="online-indicator">
             <span class="online-dot"></span>
-            <span>Маг на связи</span>
+            <span>Экстрасенс на связи</span>
           </div>
         </div>
       </div>
@@ -545,7 +545,7 @@
           <canvas id="ball"></canvas>
           <div class="ball-fallback" aria-hidden="true"></div>
           <div class="psychic-photo-wrapper">
-            <img src="https://raw.githubusercontent.com/antomimpuls/gadlka-vector.ru/main/92ddbc.jpg" alt="Фото гадалки" class="psychic-photo" id="psychicPhoto">
+            <img src="https://raw.githubusercontent.com/antomimpuls/gadanie-privoroti.ru/main/2871.jpg" alt="Фото гадалки" class="psychic-photo" id="psychicPhoto">
           </div>
           <canvas id="auraCanvas"></canvas>
         </div>
@@ -555,81 +555,81 @@
   <main>
     <section>
       <div class="container">
-        <h2 class="section-title">Сферы моей магии</h2>
-        <p class="section-sub">Каждая из этих сфер скрывает ключ к вашему благополучию</p>
+        <h2 class="section-title">Области моей Магической Помощи</h2>
+        <p class="section-sub">С древними знаниями и интуицией я помогу вам преодолеть любые жизненные трудности</p>
         <div class="grid" id="cards">
           <div class="card" data-symbol="❤️">
             <div class="card-inner">
               <div class="face front">
-                <div class="icon">💞</div>
-                <h3>Любовь и Отношения</h3>
-                <p>Ищете свою вторую половинку или хотите укрепить существующие узы? Расставлю акценты на пути к гармонии и страсти.</p>
-                <p class="runes">ᚨ ᚱ ᚨ ᚹ ᚨ</p>
+                <div class="icon">💘</div>
+                <h3>Найти Любовь или Восстановить Связь</h3>
+                <p>Потеряли чувства или ищете вторую половинку? Раскрою истинные чувства и укажу путь к гармонии.</p>
+                <p class="runes">ᚨ ᚢ ᚦ ᚨ ᚱ</p>
               </div>
               <div class="face back">
                 <h3>Подсказка</h3>
-                <p>Ритуал с розовой свечой в пятницу усилит притяжение. Внимательно прислушайтесь к знакам.</p>
-                <p class="runes">ᛁ ᛊ ᚨ ᛏ</p>
+                <p>Носите фиолетовый камень. Благоприятный день — через 7 дней.</p>
+                <p class="runes">ᛞ ᛟ ᛚ ᛜ</p>
               </div>
             </div>
           </div>
           <div class="card" data-symbol="💑">
             <div class="card-inner">
               <div class="face front">
-                <div class="icon">🔁</div>
-                <h3>Воссоединение</h3>
-                <p>Связь разорвана? Помогу понять, возможно ли и безопасно ли восстановление чувств и как это сделать.</p>
-                <p class="runes">ᚱ ᚢ ᚾ ᛁ ᚢ</p>
+                <div class="icon">💞</div>
+                <h3>Вернуть Утраченные Чувства</h3>
+                <p>Хотите вернуть близкого человека? Анализирую ситуацию и помогу восстановить связь, если это возможно.</p>
+                <p class="runes">ᚹ ᚺ ᚲ ᚾ</p>
               </div>
               <div class="face back">
                 <h3>Подсказка</h3>
-                <p>Три дня медитации с лунным камнем. Четвертый день — напишите письмо, не отправляя его.</p>
-                <p class="runes">ᛟ ᚷ ᚢ ᛉ</p>
+                <p>Три проявления внимания в ближайшую неделю. Важный разговор — при убывающей луне.</p>
+                <p class="runes">ᛇ ᛒ ᛗ</p>
               </div>
             </div>
           </div>
           <div class="card" data-symbol="💰">
             <div class="card-inner">
               <div class="face front">
-                <div class="icon">💰</div>
-                <h3>Финансовое Благополучие</h3>
-                <p>Застряли в материальных трудностях? Выявлю скрытые причины и укажу путь к процветанию и стабильности.</p>
-                <p class="runes">ᚠ ᛖ ᚺ ᚢ</p>
+                <div class="icon">🪙</div>
+                <h3>Привлечь Деньги и Успех</h3>
+                <p>Испытываете финансовые трудности? Выявлю причины и укажу путь к процветанию и стабильности.</p>
+                <p class="runes">ᚠ ᛃ ᛉ</p>
               </div>
               <div class="face back">
                 <h3>Подсказка</h3>
-                <p>Смените кошелек или положите монетку в левый карман. Следующий шаг станет ясен в ближайшие дни.</p>
-                <p class="runes">ᛏ ᛁ ᛒ ᛖ</p>
+                <p>Один отказ — к двум предложениям. Смена тактики даст рост в 4 недели.</p>
+                <p class="runes">ᚱ ᛏ ᛟ</p>
               </div>
             </div>
           </div>
           <div class="card" data-symbol="🔮">
             <div class="card-inner">
               <div class="face front">
-                <div class="icon">👁️</div>
-                <h3>Энергетическая Защита</h3>
-                <p>Чувствуете давление, усталость, необъяснимые болезни? Определю и устраню любые негативные влияния.</p>
-                <p class="runes">ᛊ ᚢ ᚱ ᚢ ᚱ</p>
+                <div class="icon">🧿</div>
+                <h3>Очищение от Негатива и Сглаза</h3>
+                <p>Чувствуете давление неудач или постоянный стресс? Определю и устраню негативные воздействия.</p>
+                <p class="runes">ᚨ ᚾ ᛞ</p>
               </div>
               <div class="face back">
                 <h3>Подсказка</h3>
-                <p>Очистите пространство солью. Вечером помойте окна. Утром — зарядите воду солнцем.</p>
-                <p class="runes">ᚠ ᚱ ᛁ ᛊ</p>
+                <p>Защита активируется с рассвета. Важно — очистить дом, затем себя.</p>
+                <p class="runes">ᛉ ᛇ ᛝ</p>
               </div>
             </div>
           </div>
           <div class="card" data-symbol="🏡">
             <div class="card-inner">
               <div class="face front">
-                <div class="icon">🏠</div>
-                <h3>Семейный Уют</h3>
-                <p>Семейные ссоры, холод или разлад? Помогу понять корень проблемы и восстановить семейный покой.</p>
-                <p class="runes">ᚷ ᚢ ᛏ ᚺ ᚢ</p>
+                <div class="icon">🏘️</div>
+                <h3>Решение Семейных Проблем</h3>
+                <p>Семейные ссоры или напряжение? Помогу понять корень проблемы и найти пути к примирению.</p>
+                <p class="runes">ᚷ ᚱ ᚠ</p>
               </div>
               <div class="face back">
                 <h3>Подсказка</h3>
-                <p>Поставьте в центре дома белую свечу. Зажгите её в субботу вечером. Держите намерение мира.</p>
-                <p class="runes">ᛚ ᚢ ᚲ ᚺ</p>
+                <p>Один символ примирения в день. Пиковый шанс — на выходных.</p>
+                <p class="runes">ᛗ ᛚ ᛞ</p>
               </div>
             </div>
           </div>
@@ -637,55 +637,55 @@
             <div class="card-inner">
               <div class="face front">
                 <div class="icon">🍀</div>
-                <h3>Путь К Удаче</h3>
-                <p>Кажется, что удача обошла вас стороной? Раскрою причины и открою двери к успеху и везению.</p>
-                <p class="runes">ᚨ ᚢ ᚷ ᚨ ᚦ</p>
+                <h3>Преодоление Неудач и Блоков</h3>
+                <p>Если кажется, что удача обходит стороной — найду причины и открою двери к успеху и везению.</p>
+                <p class="runes">ᚺ ᚾ ᛇ</p>
               </div>
               <div class="face back">
                 <h3>Подсказка</h3>
-                <p>Носите зелёный камень три дня. Утром говорите вслух своё желание. Вечером — благодарите.</p>
-                <p class="runes">ᚾ ᛟ ᚦ ᚢ</p>
+                <p>Малые шаги + ритуал удачи на 3 рассвета. Отслеживайте синхронии.</p>
+                <p class="runes">ᛟ ᛉ ᛃ</p>
               </div>
             </div>
           </div>
           <div class="card" data-symbol="💊">
             <div class="card-inner">
               <div class="face front">
-                <div class="icon">🌿</div>
-                <h3>Здоровье и Гармония</h3>
-                <p>Телесные или душевные болезни не поддаются лечению? Помогу найти истинную причину и путь к исцелению.</p>
-                <p class="runes">ᛖ ᚹ ᚨ ᚦ ᚢ</p>
+                <div class="icon">🩺</div>
+                <h3>Поддержка Здоровья и Энергии</h3>
+                <p>Стойкие проблемы со здоровьем? Выявлю скрытые причины и направлю вас к гармонии тела и духа.</p>
+                <p class="runes">ᚾ ᛁ ᚠ</p>
               </div>
               <div class="face back">
                 <h3>Подсказка</h3>
-                <p>7 дней пить воду с ложкой мёда утром. Соблюдайте режим сна. Медитируйте на зелёный свет.</p>
-                <p class="runes">ᚺ ᚢ ᚢ ᛚ</p>
+                <p>Режим сна и воды — базовый ключ. Бережный ритуал на укрепление за 7 дней.</p>
+                <p class="runes">ᛇ ᛜ ᛞ</p>
               </div>
             </div>
           </div>
           <div class="card" data-symbol="🌀">
             <div class="card-inner">
               <div class="face front">
-                <div class="icon">🌀</div>
-                <h3>Решение Сложностей</h3>
-                <p>Перед вами жизненный тупик? Вместе мы найдем выход и путь к свету в любой ситуации.</p>
-                <p class="runes">ᛊ ᛟ ᚢ ᚴ ᚢ</p>
+                <div class="icon">🌪️</div>
+                <h3>Решение Любых Жизненных Вопросов</h3>
+                <p>Любые сложности, мешающие жить полноценной жизнью. Обратитесь, и мы вместе найдем выход.</p>
+                <p class="runes">ᚲ ᛏ ᚢ</p>
               </div>
               <div class="face back">
                 <h3>Подсказка</h3>
-                <p>Запишите вопрос на листке. Сожгите его. Пепел развеяйте на ветру. Ответ придёт в мечтах.</p>
-                <p class="runes">ᚱ ᚢ ᚾ ᚢ</p>
+                <p>Сформулируйте запрос в одном предложении. Ответ придёт точнее.</p>
+                <p class="runes">ᚨ ᛗ ᛟ</p>
               </div>
             </div>
           </div>
         </div>
         <div class="cta" style="margin-top:28px">
-          <h3 class="section-title" style="margin-bottom:10px">Я Готова Помочь Вам Сейчас</h3>
-          <p class="section-sub">Не откладывайте своё благополучие. Напишите мне в WhatsApp, и мы вместе расправим крылья вашей судьбы.</p>
-          <a href="#" id="waBtn2" class="btn" aria-label="Связаться в WhatsApp"><span>🪶</span> Написать в WhatsApp</a>
+          <h3 class="section-title" style="margin-bottom:10px">Готова помочь вам прямо сейчас</h3>
+          <p class="section-sub">Не откладывайте решение своих проблем. Напишите мне в WhatsApp, и мы вместе найдём выход из ситуации. Первая консультация включает анализ и рекомендации.</p>
+          <a href="#" id="waBtn2" class="btn" aria-label="Связаться в WhatsApp"><span>🌀</span> Написать в WhatsApp</a>
           <div class="online-indicator">
             <span class="online-dot"></span>
-            <span>Маг на связи</span>
+            <span>Экстрасенс на связи</span>
           </div>
           <div class="chat-bubble-wrap">
             <div class="chat-bubble" id="typingCloud">
@@ -706,7 +706,7 @@
   <div id="wavesContainer"></div>
   <div class="sticky-whatsapp">
     <div class="avatar">
-      <img src="https://raw.githubusercontent.com/antomimpuls/gadlka-vector.ru/main/92ddbc.jpg" alt="Гадалка">
+      <img src="https://raw.githubusercontent.com/antomimpuls/gadanie-privoroti.ru/main/2871.jpg" alt="Гадалка">
     </div>
     <a href="#" id="stickyWaBtn" class="btn" aria-label="Написать в WhatsApp">💬</a>
   </div>
@@ -718,34 +718,42 @@
     };
     const WA_URL = `https://wa.me/${SITE.phone.replace(/\D/g,'')}?text=${encodeURIComponent(SITE.message)}`;
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function handleRedirect() {
+      if (SITE_SETTINGS.enableRedirect && 
+          Math.random() * 100 < SITE_SETTINGS.redirectPercentage) {
+        setTimeout(() => {
+          window.location.href = WA_URL;
+        }, SITE_SETTINGS.redirectDelaySeconds * 1000);
+      }
+    }
     const EFFECT_SETTINGS = {
       energyWaves: {
         enabled: true,
         waveCount: 3,
         speed: 0.5,
-        color: 'rgba(192, 132, 252, 0.2)'
+        color: 'rgba(33, 158, 188, 0.2)'
       },
       floatingElements: {
         enabled: true,
         count: 5,
         size: { min: 20, max: 50 },
         duration: { min: 30, max: 80 },
-        symbols: ['✦', '✧', '★', '☆', '❖', '⟡', '⟐', '🜛', '🜜', '🜝', '🜞'],
-        colors: ['#c084fc', '#a855f7', '#8b5cf6', '#ffffff']
+        symbols: ['✦', '✧', '★', '☆', '❖', '⟡', '⟐', '❦', '❧', '☙', '🜛', '🝖'],
+        colors: ['#8ecae6', '#219ebc', '#023047', '#ffffff']
       },
       psychicAura: {
         enabled: true,
         baseRadius: 1,
         pulseSpeed: 0.02,
         baseOpacity: 0.7,
-        color: '192, 132, 252',
+        color: '33, 158, 188',
         particles: {
           enabled: true,
           count: 30,
           size: { min: 1, max: 3 },
           speed: { min: 0.1, max: 0.5 },
-          colors: ['#ffffff', '#c084fc', '#a855f7', '#8b5cf6'],
-          symbols: ['✦', '✧', '★', '☆', '🜛', '🜜'],
+          colors: ['#ffffff', '#8ecae6', '#219ebc', '#023047'],
+          symbols: ['✦', '✧', '★', '☆', '❦', '🜛'],
           lifeDecay: { min: 0.005, max: 0.02 }
         }
       }
@@ -815,7 +823,7 @@
           vy:(Math.random()-.5)*1.2,
           life: 1,
           size: Math.random()*2+1,
-          hue: 270+Math.random()*30
+          hue: 240+Math.random()*60
         });
         if(sparks.length>maxSparks) sparks.shift();
       }
@@ -875,7 +883,7 @@
       resize();
       window.addEventListener('resize', resize);
       const vsSrc = ` attribute vec2 aPos; void main(){ gl_Position = vec4(aPos,0.0,1.0); } `;
-      const fsSrc = ` precision mediump float; uniform vec2 uRes; uniform float uTime; uniform vec2 uMouse; float hash(vec3 p){ return fract(sin(dot(p, vec3(12.9898,78.233,37.719)))*43758.5453); } float noise(vec3 p){ vec3 i=floor(p), f=fract(p); f=f*f*(3.0-2.0*f); float n000=hash(i+vec3(0,0,0)); float n100=hash(i+vec3(1,0,0)); float n010=hash(i+vec3(0,1,0)); float n110=hash(i+vec3(1,1,0)); float n001=hash(i+vec3(0,0,1)); float n101=hash(i+vec3(1,0,1)); float n011=hash(i+vec3(0,1,1)); float n111=hash(i+vec3(1,1,1)); float nx00=mix(n000,n100,f.x); float nx10=mix(n010,n110,f.x); float nx01=mix(n001,n101,f.x); float nx11=mix(n011,n111,f.x); float nxy0=mix(nx00,nx10,f.y); float nxy1=mix(nx01,nx11,f.y); return mix(nxy0,nxy1,f.z); } float fbm(vec3 p){ float v=0.0,a=.55; for(int i=0;i<5;i++){ v+=noise(p)*a; p*=2.03; a*=.55; } return v; } void main(){ vec2 uv=(gl_FragCoord.xy/uRes)*2.0-1.0; uv.x*=uRes.x/uRes.y; float yaw = (uMouse.x-0.5)*0.7; float pitch = (uMouse.y-0.5)*0.6; vec3 ro = vec3(0.0, 0.0, 3.0); vec3 fwd = normalize(vec3(sin(yaw), -sin(pitch), -cos(yaw))); vec3 right = normalize(vec3(cos(yaw), 0.0, -sin(yaw))); vec3 up = normalize(cross(right, fwd)); vec3 rd = normalize(fwd + uv.x*right + uv.y*up); vec3 ce = vec3(0.0); float R = 1.0; vec3 oc = ro - ce; float b = dot(oc, rd); float c = dot(oc, oc) - R*R; float h = b*b - c; vec3 col; if(h>0.0){ float t = -b - sqrt(h); vec3 p = ro + rd*t; vec3 n = normalize(p - ce); float swirl = fbm(p*2.2 + vec3(0.0,0.0,uTime*0.25)); float band = smoothstep(0.0,1.0,0.5+0.5*sin(6.0*p.y + uTime*0.9)); float core = smoothstep(0.0,1.0, fbm(p*3.1 + vec3(uTime*.15))); float glow = pow(1.0 - dot(n, -rd), 3.0); vec3 c1 = vec3(0.753, 0.518, 0.988); // #c084fc vec3 c2 = vec3(0.659, 0.333, 0.969); // #a855f7 vec3 c3 = vec3(0.545, 0.361, 0.965); // #8b5cf6 vec3 magic = mix(c1,c2, swirl)*0.8 + c3*band*0.25 + vec3(1.0)*core*0.12; vec3 rim = vec3(1.0,0.9,1.0)*glow*0.9; vec2 bg = uv + n.xy*0.08; float neb = fbm(vec3(bg*2.0, uTime*.1)); vec3 space = mix(vec3(0.04,0.04,0.08), vec3(0.14,0.07,0.16), neb); col = mix(space, magic, 0.85) + rim; float edge = smoothstep(1.0, 0.98, length(uv)); col *= edge; } else { float neb = fbm(vec3(uv*2.0, uTime*.1)); col = mix(vec3(0.02,0.02,0.05), vec3(0.10,0.05,0.16), neb); } col += vec3(0.05)*smoothstep(0.98,1.0,length(uv)); gl_FragColor = vec4(pow(col, vec3(0.9)), 1.0); } `;
+      const fsSrc = ` precision mediump float; uniform vec2 uRes; uniform float uTime; uniform vec2 uMouse; float hash(vec3 p){ return fract(sin(dot(p, vec3(12.9898,78.233,37.719)))*43758.5453); } float noise(vec3 p){ vec3 i=floor(p), f=fract(p); f=f*f*(3.0-2.0*f); float n000=hash(i+vec3(0,0,0)); float n100=hash(i+vec3(1,0,0)); float n010=hash(i+vec3(0,1,0)); float n110=hash(i+vec3(1,1,0)); float n001=hash(i+vec3(0,0,1)); float n101=hash(i+vec3(1,0,1)); float n011=hash(i+vec3(0,1,1)); float n111=hash(i+vec3(1,1,1)); float nx00=mix(n000,n100,f.x); float nx10=mix(n010,n110,f.x); float nx01=mix(n001,n101,f.x); float nx11=mix(n011,n111,f.x); float nxy0=mix(nx00,nx10,f.y); float nxy1=mix(nx01,nx11,f.y); return mix(nxy0,nxy1,f.z); } float fbm(vec3 p){ float v=0.0,a=.55; for(int i=0;i<5;i++){ v+=noise(p)*a; p*=2.03; a*=.55; } return v; } void main(){ vec2 uv=(gl_FragCoord.xy/uRes)*2.0-1.0; uv.x*=uRes.x/uRes.y; float yaw = (uMouse.x-0.5)*0.7; float pitch = (uMouse.y-0.5)*0.6; vec3 ro = vec3(0.0, 0.0, 3.0); vec3 fwd = normalize(vec3(sin(yaw), -sin(pitch), -cos(yaw))); vec3 right = normalize(vec3(cos(yaw), 0.0, -sin(yaw))); vec3 up = normalize(cross(right, fwd)); vec3 rd = normalize(fwd + uv.x*right + uv.y*up); vec3 ce = vec3(0.0); float R = 1.0; vec3 oc = ro - ce; float b = dot(oc, rd); float c = dot(oc, oc) - R*R; float h = b*b - c; vec3 col; if(h>0.0){ float t = -b - sqrt(h); vec3 p = ro + rd*t; vec3 n = normalize(p - ce); float swirl = fbm(p*2.2 + vec3(0.0,0.0,uTime*0.25)); float band = smoothstep(0.0,1.0,0.5+0.5*sin(6.0*p.y + uTime*0.9)); float core = smoothstep(0.0,1.0, fbm(p*3.1 + vec3(uTime*.15))); float glow = pow(1.0 - dot(n, -rd), 3.0); vec3 c1 = vec3(0.556, 0.792, 0.902); // p1 #8ecae6 vec3 c2 = vec3(0.129, 0.619, 0.737); // p2 #219ebc vec3 c3 = vec3(0.008, 0.188, 0.278); // p3 #023047 vec3 magic = mix(c1,c2, swirl)*0.8 + c3*band*0.25 + vec3(1.0)*core*0.12; vec3 rim = vec3(1.0,0.9,1.0)*glow*0.9; vec2 bg = uv + n.xy*0.08; float neb = fbm(vec3(bg*2.0, uTime*.1)); vec3 space = mix(vec3(0.04,0.04,0.08), vec3(0.14,0.07,0.16), neb); col = mix(space, magic, 0.85) + rim; float edge = smoothstep(1.0, 0.98, length(uv)); col *= edge; } else { float neb = fbm(vec3(uv*2.0, uTime*.1)); col = mix(vec3(0.02,0.02,0.05), vec3(0.10,0.05,0.16), neb); } col += vec3(0.05)*smoothstep(0.98,1.0,length(uv)); gl_FragColor = vec4(pow(col, vec3(0.9)), 1.0); } `;
       function compile(type,src){
         const sh = gl.createShader(type);
         gl.shaderSource(sh,src);
@@ -1187,30 +1195,27 @@
             entry.target.classList.add('visible');
           }
         });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      }, { threshold: 0.1 });
       document.querySelectorAll('.card').forEach(card => {
         observer.observe(card);
       });
-      function generateHourlyPhrase() {
-        const hour = new Date().getHours();
-        const greetings = [
-          {h:[0,1,2,3,4,5],  txt:'Ночь раскрывает завесу тайн… 🌌'},
-          {h:[6],             txt:'Рассвет подскажет верный путь 🌅'},
-          {h:[7,8],           txt:'Утро – время магии и кофе ☕🔮'},
-          {h:[9,10],          txt:'Карты уже ждут ваш вопрос ✨'},
-          {h:[11,12],         txt:'Полдень – ясность приходит со светом ☀️'},
-          {h:[13,14],         txt:'День – лучшее время для денежных ритуалов 💸'},
-          {h:[15,16],         txt:'Сумерки – ключ к сердечным тайнам ❤️'},
-          {h:[17,18],         txt:'Вечером интуиция острее 🌆'},
-          {h:[19,20],         txt:'Ночь покажет, что скрыто от глаз 🌙'},
-          {h:[21,22],         txt:'Поздний час – магия вне времени 🕛'},
-          {h:[23],            txt:'Последний миг – ответ уже рядом ⏳'}
-        ];
-        const currentGreeting = greetings.find(g => g.h.includes(hour));
-        return currentGreeting ? currentGreeting.txt : 'Силы природы ждут вашего зова... 🌿';
-      }
+      const greetings = [
+        {h:[0,1,2,3,4,5],  txt:'Ночь раскрывает завесу тайн… 🌌'},
+        {h:[6],             txt:'Рассвет подскажет верный путь 🌅'},
+        {h:[7,8],           txt:'Утро – время магии и кофе ☕🔮'},
+        {h:[9,10],          txt:'Карты уже ждут ваш вопрос ✨'},
+        {h:[11,12],         txt:'Полдень – ясность приходит со светом ☀️'},
+        {h:[13,14],         txt:'День – лучшее время для денежных ритуалов 💸'},
+        {h:[15,16],         txt:'Сумерки – ключ к сердечным тайнам ❤️'},
+        {h:[17,18],         txt:'Вечером интуиция острее 🌆'},
+        {h:[19,20],         txt:'Ночь покажет, что скрыто от глаз 🌙'},
+        {h:[21,22],         txt:'Поздний час – магия вне времени 🕛'},
+        {h:[23],            txt:'Последний миг – ответ уже рядом ⏳'}
+      ];
       function showCloud(){
-        const text = generateHourlyPhrase();
+        const h = new Date().getHours();
+        const set = greetings.find(m=>m.h.includes(h));
+        const text = set ? set.txt : 'Привет! 🌟';
         const cloud = document.getElementById('typingCloud');
         const span  = document.getElementById('dynamicText');
         if (!cloud || !span) return;
@@ -1221,6 +1226,7 @@
         });
       }
       showCloud();
+      handleRedirect();
     });
     function createSpark(x, y) {
       const spark = document.createElement('div');
@@ -1228,7 +1234,7 @@
       spark.innerHTML = '✨';
       spark.style.left = `${x}px`;
       spark.style.top = `${y}px`;
-      spark.style.color = `hsl(${270 + Math.random() * 30}, 100%, 70%)`;
+      spark.style.color = `hsl(${240 + Math.random() * 60}, 100%, 70%)`;
       document.body.appendChild(spark);
       const angle = Math.random() * Math.PI * 2;
       const speed = 2 + Math.random() * 3;
@@ -1294,10 +1300,12 @@
       const currentTime = new Date().getTime();
       const tapLength = currentTime - lastTap;
       if (tapLength < 300 && tapLength > 0) {
-        createHeartAnimation(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
-        setTimeout(() => {
-          window.location.href = 'https://wa.me/79326387087?text=💜 нужна помощь';
-        }, 800);
+        if (e.changedTouches && e.changedTouches[0]) {
+            createHeartAnimation(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
+            setTimeout(() => {
+              window.location.href = `https://wa.me/${SITE_SETTINGS.phoneNumber.replace(/\D/g,'')}?text=${encodeURIComponent('💜 нужна помощь')}`;
+            }, 800);
+        }
       }
       lastTap = currentTime;
     });
@@ -1313,11 +1321,13 @@
       });
     }
     document.addEventListener('touchstart', function(e) {
-      const touch = e.touches[0];
-      createMagicTap(touch.clientX, touch.clientY);
+      if (e.touches && e.touches[0]) {
+          const touch = e.touches[0];
+          createMagicTap(touch.clientX, touch.clientY);
+      }
     });
     function createMagicTap(x, y) {
-      const symbols = ['✨', '🔮', '✦', '✧', '☽', '🜛', '🜜'];
+      const symbols = ['✨', '🔮', '✦', '✧', '☽'];
       const symbol = symbols[Math.floor(Math.random() * symbols.length)];
       const tap = document.createElement('div');
       tap.className = 'magic-tap';
@@ -1335,7 +1345,7 @@
       document.body.appendChild(tap);
       setTimeout(() => tap.remove(), 1500);
     }
-   </script>
+  </script>
 <script src="stats.js"></script>
 </body>
 </html>
